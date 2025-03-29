@@ -3,13 +3,13 @@ import { getAuth } from "firebase-admin/auth";
 import { getFirestore } from "firebase-admin/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCyQCVHjkKwMLt6cGz77ommyQBEN4e9hug",
-  authDomain: "mock-interview-871e8.firebaseapp.com",
-  projectId: "mock-interview-871e8",
-  storageBucket: "mock-interview-871e8.firebasestorage.app",
-  messagingSenderId: "878952967961",
-  appId: "1:878952967961:web:e7fe34241120dbf770df88",
-  measurementId: "G-ZGR1160PWX"
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
+  measurementId: process.env.NEXT_PUBLIC_MEASUREMENT_ID
 };
 
 
@@ -18,3 +18,12 @@ const app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
 
 export const auth = getAuth(app);
 export const db = getFirestore(app);
+
+
+NEXT_PUBLIC_FIREBASE_API_KEY=AIzaSyCyQCVHjkKwMLt6cGz77ommyQBEN4e9hug
+NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=mock-interview-871e8.firebaseapp.com
+NEXT_PUBLIC_FIREBASE_PROJECT_ID=mock-interview-871e8
+NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=mock-interview-871e8.firebasestorage.app
+NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=878952967961
+NEXT_PUBLIC_FIREBASE_APP_ID=1:878952967961:web:e7fe34241120dbf770df88
+NEXT_PUBLIC_MEASUREMENT_ID=G-ZGR1160PWX
