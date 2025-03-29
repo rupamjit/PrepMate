@@ -18,12 +18,3 @@ const app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
 
 export const auth = getAuth(app);
 export const db = getFirestore(app);
-
-
-NEXT_PUBLIC_FIREBASE_API_KEY=AIzaSyCyQCVHjkKwMLt6cGz77ommyQBEN4e9hug
-NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=mock-interview-871e8.firebaseapp.com
-NEXT_PUBLIC_FIREBASE_PROJECT_ID=mock-interview-871e8
-NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=mock-interview-871e8.firebasestorage.app
-NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=878952967961
-NEXT_PUBLIC_FIREBASE_APP_ID=1:878952967961:web:e7fe34241120dbf770df88
-NEXT_PUBLIC_MEASUREMENT_ID=G-ZGR1160PWX
