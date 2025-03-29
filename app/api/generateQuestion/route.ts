@@ -30,7 +30,7 @@ export async function POST(request: Request) {
     try {
       questions = JSON.parse(questionsText);
     } catch (err) {
-      throw new Error("Invalid JSON format received from AI.");
+      throw new Error("Invalid JSON format received from AI.",err);
     }
 
     const interview = {
